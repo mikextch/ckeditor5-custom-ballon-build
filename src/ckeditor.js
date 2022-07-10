@@ -31,7 +31,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 import Title from '@ckeditor/ckeditor5-heading/src/title.js';
-import ImageFromUrl from '@mkxtch/ckeditor5-only-url-image'
+import ImageFromUrl from '@mkxtch/ckeditor5-only-url-image/src/insertImageURL.js'
 
 class Editor extends BalloonBlockEditor {}
 
