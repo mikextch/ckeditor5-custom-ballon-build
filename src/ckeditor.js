@@ -31,11 +31,13 @@ import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 import Title from '@ckeditor/ckeditor5-heading/src/title.js';
+import ImageFromUrl from '@mkxtch/ckeditor5-only-url-image'
 
 class Editor extends BalloonBlockEditor {}
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
+	ImageFromUrl,
 	Autoformat,
 	AutoImage,
 	AutoLink,
@@ -86,7 +88,7 @@ Editor.defaultConfig = {
 		'blockQuote',
 		'mediaEmbed',
 		'insertTable',
-		'insertImage',
+		'insertImageURL',
 		'undo',
 		'redo'
 	],
