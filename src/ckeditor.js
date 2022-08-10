@@ -3,7 +3,8 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 import BalloonBlockEditor from '@ckeditor/ckeditor5-editor-balloon/src/ballooneditor.js';
-import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
+// import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink.js';
 import Autosave from '@ckeditor/ckeditor5-autosave/src/autosave.js';
@@ -29,7 +30,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph.js';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice.js';
 import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
-import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
+// import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 import Title from '@ckeditor/ckeditor5-heading/src/title.js';
 import ImageFromUrl from '@mkxtch/ckeditor5-only-url-image/src/insertImageURL.js'
 
@@ -38,7 +39,7 @@ class Editor extends BalloonBlockEditor {}
 // Plugins to include in the build.
 Editor.builtinPlugins = [
 	ImageFromUrl,
-	Autoformat,
+	Alignment,
 	AutoImage,
 	AutoLink,
 	Autosave,
@@ -64,7 +65,7 @@ Editor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation,
+	// TextTransformation,
 	Title
 ];
 
@@ -79,8 +80,9 @@ Editor.defaultConfig = {
 	},
 	blockToolbar: [
 		'heading',
-		'indent',
-		'outdent',
+		'alignment',
+		// 'indent',
+		// 'outdent',
 		// 'imageUpload',
 		'numberedList',
 		'bulletedList',
