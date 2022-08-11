@@ -19,6 +19,7 @@ import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle.js';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar.js';
+import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption.js';
 // import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload.js';
 import Indent from '@ckeditor/ckeditor5-indent/src/indent.js';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic.js';
@@ -33,12 +34,14 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 // import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 import Title from '@ckeditor/ckeditor5-heading/src/title.js';
 import ImageFromUrl from '@mkxtch/ckeditor5-only-url-image/src/insertImageURL.js'
+import InsertImageUnsplash from '@mkxtch/ckeditor5-unsplash-search-image/src/insertImageUnsplash'
 
 class Editor extends BalloonBlockEditor {}
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
 	ImageFromUrl,
+	InsertImageUnsplash,
 	Alignment,
 	AutoImage,
 	AutoLink,
@@ -54,6 +57,7 @@ Editor.builtinPlugins = [
 	ImageResize,
 	ImageStyle,
 	ImageToolbar,
+	ImageCaption,
 	// ImageUpload,
 	Indent,
 	Italic,
@@ -87,10 +91,11 @@ Editor.defaultConfig = {
 		'numberedList',
 		'bulletedList',
 		'|',
+		'insertImageUnsplash',
+		'insertImageURL',
 		'blockQuote',
 		'mediaEmbed',
 		'insertTable',
-		'insertImageURL',
 		'undo',
 		'redo'
 	],
